@@ -204,6 +204,8 @@ CurrencyTextField.propTypes = {
   readOnly: PropTypes.bool,
   /** predefined objects are available in <a href="https://github.com/autoNumeric/autoNumeric/blob/master/README.md#predefined-options">AutoNumeric</a>*/
   preDefined: PropTypes.object,
+  /** On invalid paste reaction */
+  onInvalidPaste: PropTypes.oneOf(["error", "ignore", "clamp", "truncate", "replace"]),
 }
 
 CurrencyTextField.defaultProps = {
@@ -214,6 +216,7 @@ CurrencyTextField.defaultProps = {
   textAlign: "right",
   maximumValue: "10000000000000",
   minimumValue: "-10000000000000",
+  onInvalidPaste: "replace"
 }
 
 export default CurrencyTextField;
