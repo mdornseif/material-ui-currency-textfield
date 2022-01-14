@@ -125,7 +125,12 @@ class CurrencyTextField extends React.Component {
         }}
         inputProps={{
           className: classes.textField,
-          ...inputProps,
+          ...inputProps
+        }}
+        sx={{
+          "& .MuiInput-input": {
+            textAlign: this.props.textAlign || "right"
+          }
         }}
         {...otherProps}
       />
